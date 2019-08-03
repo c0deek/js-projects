@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
 	<title>Drawing Board</title>
 </head>
 <body>
@@ -15,10 +16,15 @@
 		Sorry! No support from browser.
 	</canvas>
 
-	<div id="color-picker">
-		<input type="range" name="color" min="0" max="255" value="0" id="redcolor">
-		<input type="range" name="color" min="0" max="255" value="0" id="greencolor">
-		<input type="range" name="color" min="0" max="255" value="0" id="bluecolor">
+	<div id="color-sliders">
+		<input type="range" min="0" max="255" value="0" name="redcolor" id="redcolor">
+		<p>Red</p>
+		<input type="range" min="0" max="255" value="0" name="greencolor" id="greencolor">
+		<p>Green</p>
+		<input type="range" min="0" max="255" value="0" name="bluecolor" id="bluecolor">
+		<p>Blue</p>
+
+		<span id="current-color"></span>
 	</div>
 
 	<div id="brush-size">

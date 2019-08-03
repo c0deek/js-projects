@@ -3,13 +3,14 @@ $('#canvas').mousedown(function(e) {
 	var x = e.pageX - this.offsetLeft;
 	var y = e.pageY - this.offsetTop;
 	color = "rgb("+ red + ", " + green + ", " + blue + ")";
+	$('#currenr-color').css('background-color', color)
 	drawLine(x,y, false, color);
 	reload();
 });
 
 $('#canvas').mousemove(function(e) {
 	if(paint) {
-		color = "rgb("+ red + ", " + green + ", " + blue + ")";
+
 		drawLine(e.pageX - this.offsetLeft, e.pageY - this.offsetTop, true, color);
 		reload();
 	}
@@ -31,20 +32,22 @@ $('#reset').click(function() {
 });
 
 
-
 $(document).on('change', '#redcolor', function() {
 	red = this.value;
-	console.log('red', red);
+	color = "rgb("+ red + ", " + green + ", " + blue + ")";
+	$('#current-color').css('background', color);
 });
 
 $(document).on('change', '#greencolor', function() {
 	green = this.value;
-	console.log('green', green);
+	color = "rgb("+ red + ", " + green + ", " + blue + ")";
+	$('#current-color').css('background', color);
 });
 
 $(document).on('change', '#bluecolor', function() {
 	blue = this.value;
-	console.log('blue', blue);
+	color = "rgb("+ red + ", " + green + ", " + blue + ")";
+	$('#current-color').css('background', color);
 });
 
 
@@ -52,6 +55,7 @@ $(document).on('change', '#bluecolor', function() {
 var red = 0; 
 var blue = 0;
 var green = 0;
+var size = 3;
 
 var ctx = document.getElementById("canvas").getContext("2d");
 
@@ -71,7 +75,7 @@ function drawLine(x, y, dragBool, color) {
 function reload(){
   ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height); // Clears the canvas
   
-  color = "rgb("+ red + ", " + green + ", " + blue + ")";
+  // color = "rgb("+ red + ", " + green + ", " + blue + ")";
 
   // ctx.strokeStyle = color;
   // ctx.lineJoin = "round";
@@ -80,15 +84,15 @@ function reload(){
   for(var i=0; i < posx.length; i++) {
   	ctx.strokeStyle = colorArr[i];
   	ctx.lineJoin = "round";
-  	ctx.lineWidth = 5;
+  	ctx.lineWidth = size;
 
     ctx.beginPath();
     if(drag[i] && i) {
-	    ctx.moveTo(posx[i-1], posy[i-1]);
+	    ctx.moveTo(posx[i-1], posy[i-1]+25);
     } else {
-    	ctx.moveTo(posx[i], posy[i]);
+    	ctx.moveTo(posx[i], posy[i]+25);
     }
-    ctx.lineTo(posx[i], posy[i]);
+    ctx.lineTo(posx[i], posy[i]+25);
     ctx.closePath();
     ctx.stroke();
   }

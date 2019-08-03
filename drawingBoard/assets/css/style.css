@@ -1,14 +1,31 @@
 body {
-	background: black;
-	color: white;
-	text-align: center;
+	font-family: 'poppins';
 }
 
 canvas {
+	margin: 20px 0 20px 0;
+	display: block;
 	background: white;
+	border: 2px solid black;
 	border-radius: 10px;
+	cursor: url("https://img.icons8.com/metro/26/000000/pencil.png"), auto;
 }
 
-#redcolor {
-	background: red;
+#color-sliders {
+	display: flex;
+}
+
+#color-sliders input {
+	width: 10%;
+}
+
+#color-sliders p {
+	margin: 0 50px 0 0;
+}
+
+#current-color {
+	background: black;
+	width: 20px;
+	border-radius: 50%;
+	border: 2px solid black;
 }
