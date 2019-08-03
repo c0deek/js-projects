@@ -34,11 +34,12 @@ img {
 	top: 0;
 	left: 0;
 	display: none;
+	text-align: center;
 }
 
 #overlay img {
 	width: 650px;
-	margin: 5% 0 0 26%;
+	margin: 5% 0 0 0;
 	border: 2px solid black;
 
 }
