@@ -8,14 +8,17 @@
 
 	<h1>Drawing Board</h1>
 	
+	<button id="reset">Reset</button>
+	<button id="erase">Eraser</button>
+
 	<canvas id="canvas" width="700px" height="400px">
 		Sorry! No support from browser.
 	</canvas>
 
 	<div id="color-picker">
-		<input type="range" name="color" min="0" max="255" id="redcolor">
-		<input type="range" name="color" min="0" max="255" id="bluecolor">
-		<input type="range" name="color" min="0" max="255" id="greencolor">
+		<input type="range" name="color" min="0" max="255" value="0" id="redcolor">
+		<input type="range" name="color" min="0" max="255" value="0" id="greencolor">
+		<input type="range" name="color" min="0" max="255" value="0" id="bluecolor">
 	</div>
 
 	<div id="brush-size">
