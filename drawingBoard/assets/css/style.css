@@ -2,13 +2,10 @@ body {
 	font-family: 'poppins';
 	text-align: center;
 	align-items: center;
-	background: rgb(112, 7, 7);
-
 }
 
 h1 {
 	text-align: center;
-	color: white;
 }
 
 canvas {
@@ -16,12 +13,12 @@ canvas {
 	display: block;
 	border: 3px solid black;
 	border-radius: 10px;
-	background: white;
 	cursor: url("https://img.icons8.com/metro/26/000000/pencil.png"), auto;
 }
 
 button {
 	background: white;
+	margin: 0 30px;
 	border: 2px solid black;
 	border-radius: 5px;
 	height: 30px;
