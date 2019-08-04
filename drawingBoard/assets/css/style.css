@@ -1,18 +1,37 @@
 body {
 	font-family: 'poppins';
+	text-align: center;
+	align-items: center;
+	background: rgb(112, 7, 7);
+
+}
+
+h1 {
+	text-align: center;
+	color: white;
 }
 
 canvas {
-	margin: 20px 0 20px 0;
+	margin: 10px 0 10px 19%;
 	display: block;
+	border: 3px solid black;
+	border-radius: 10px;
+	background: white;
+	cursor: url("https://img.icons8.com/metro/26/000000/pencil.png"), auto;
+}
+
+button {
 	background: white;
 	border: 2px solid black;
-	border-radius: 10px;
-	cursor: url("https://img.icons8.com/metro/26/000000/pencil.png"), auto;
+	border-radius: 5px;
+	height: 30px;
+	width: 100px;
+	font-size: 20px;
 }
 
 #color-sliders {
 	display: flex;
+	margin: 0 0 0 20%;
 }
 
 #color-sliders input {
@@ -20,7 +39,7 @@ canvas {
 }
 
 #color-sliders p {
-	margin: 0 50px 0 0;
+	margin: 0 80px 0 20px;
 }
 
 #current-color {
@@ -29,3 +48,4 @@ canvas {
 	border-radius: 50%;
 	border: 2px solid black;
 }
+

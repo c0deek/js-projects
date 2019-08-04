@@ -28,6 +28,14 @@ $('#reset').click(function() {
 	posx = [];
 	posy = [];
 	drag = [];
+	colorArr = [];
+	$('#color-sliders').children().val(0);
+	console.log($('#color-sliders').children().val());
+	color = "rgb(0, 0, 0)";
+	$('#current-color').css('background', color);
+	red = 0;
+	green = 0;
+	blue = 0;
 	reload();
 });
 
