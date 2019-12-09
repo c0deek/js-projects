@@ -2,7 +2,12 @@ $('#canvas').mousedown(function(e) {
 	paint = true;
 	var x = e.pageX - this.offsetLeft;
 	var y = e.pageY - this.offsetTop;
-	color = "rgb("+ red + ", " + green + ", " + blue + ")";
+	if(!erase) {
+		color = "rgb("+ red + ", " + green + ", " + blue + ")";
+	}
+	else {
+		color = "rgb(255,255,255)";
+	}
 	$('#currenr-color').css('background-color', color)
 	drawLine(x,y, false, color);
 	reload();
@@ -22,6 +27,11 @@ $('#canvas').mouseup(function() {
 
 $('#canvas').mouseout(function() {
 	paint = false;
+});
+
+$('#erase').click(function() {
+	erase = !erase;
+	$('#erase').text((erase)?"DRAW":"ERASE");
 });
 
 $('#reset').click(function() {
@@ -63,6 +73,7 @@ $(document).on('change', '#bluecolor', function() {
 var red = 0; 
 var blue = 0;
 var green = 0;
+var erase = false;
 var size = 3;
 
 var ctx = document.getElementById("canvas").getContext("2d");
